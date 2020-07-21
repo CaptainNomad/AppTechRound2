@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    
+    <androidx.viewpager.widget.ViewPager
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    android:id="@+id/image"/>
+
+    <LinearLayout
+        android:id="@+id/Slider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="185dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="horizontal"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_back"
+        android:layout_margin="10dp"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image"
+        android:padding="0dp"
+        android:elevation="3dp"
+        android:background="#FFFFFF"
+        android:id="@+id/box">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All That Jazz"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:id="@+id/AllThatJazz" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Smooth Jazz for your Soul | 5 events "
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="15dp"
+            android:textSize="14dp"
+            android:layout_below="@+id/AllThatJazz"
+            android:id="@+id/soul"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_share"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="25dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/share"/>
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:src="@drawable/heart"
+            android:id="@+id/heart"
+            android:layout_toLeftOf="@+id/share"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="47dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="1225"
+            android:id="@+id/likes"
+            android:textColor="#E91E63"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@id/share"
+            android:layout_marginRight="13dp"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerView"
+        android:layout_below="@+id/box"
+        android:scrollbars="vertical"/>
+
+
+</RelativeLayout>
